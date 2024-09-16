@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/css/output.css" />
+    <title>Document</title>
+  </head>
+  <style>
+    *:focus {
+      outline: none;
+    }
+  </style>
+  <body class="scrolll-smooth">
+    <header class="bg-white px-6 lg:px-60">
+      <div
+        class="container pl-6 lg:pl-0 mx-auto flex items-center justify-between py-4"
+      >
+        <div class="flex items-center">
+          <img
+            src="assets/images/logo.png"
+            alt="Logo"
+            class="w-3/4 min-h-[20px]"
+          />
+        </div>
+        <button
+          id="menu-button"
+          class="block lg:hidden text-secondary pr-6 lg:pr-0 focus:outline-none"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+        <nav
+          id="menu"
+          class="hidden lg:flex text-secondary text-body2 space-x-4 items-center"
+        >
+          <ul class="flex space-x-4">
+            <li>
+              <a
+                href="#home"
+                data-id="home"
+                class="hover:text-grey disabled:text-greyblue focus-visible:underline active:font-bold active:underline duration-200"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#services"
+                data-id="services"
+                class="hover:text-grey disabled:text-greyblue focus-visible:underline active:font-bold active:underline duration-200"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#features"
+                data-id="features"
+                class="hover:text-grey disabled:text-greyblue focus-visible:underline active:font-bold active:underline duration-200"
+                >Features</a
+              >
+            </li>
+            <li>
+              <a
+                href="#products"
+                data-id="products"
+                class="hover:text-grey disabled:text-greyblue focus-visible:underline active:font-bold active:underline duration-200"
+                >Products</a
+              >
+            </li>
+            <li>
+              <a
+                href="#testimonials"
+                data-id="testimonials"
+                class="hover:text-grey disabled:text-greyblue focus-visible:underline active:font-bold active:underline duration-200"
+                >Testimonials</a
+              >
+            </li>
+            <li>
+              <a
+                href="#faq"
+                data-id="faq"
+                class="hover:text-grey disabled:text-greyblue focus-visible:underline active:font-bold active:underline duration-200"
+                >FAQ</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                data-id="contact"
+                class="hover:text-grey disabled:text-greyblue focus-visible:underline active:font-bold active:underline duration-200"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="hidden lg:flex space-x-4">
+          <button
+            class="px-6 py-2 flex items-center justify-center gap-2 text-primary border border-primary focus-visible:border-i_grey focus-visible:border-2 active:bg-silver active:border-none disabled:text-greyblue disabled:border-none rounded hover:bg-silver transition-colors duration-300"
+            data-loading-button2
+            data-loading-icon="assets/images/icons/Loading2.png"
+          >
+            <span>Login</span>
+            <img class="w-5 h-5 hidden" data-loading-icon />
+          </button>
+          <button
+            class="px-6 py-2 bg-primary text-white rounded focus-visible:border-2 focus-visible:border-d_grey active:bg-shade_2 disabled:bg-silver disabled:text-greyblue transition-colors duration-300 flex items-center justify-center gap-2"
+            data-loading-button
+            data-loading-icon="assets/images/icons/Loading.png"
+          >
+            <span>Sign Up</span>
+            <img class="w-5 h-5 hidden" data-loading-icon />
+          </button>
+        </div>
+      </div>
+      <div
+        id="mobile-menu"
+        class="hidden lg:hidden bg-silver text-secondary space-y-4 p-4"
+      >
+        <ul class="space-y-2">
+          <li>
+            <a
+              href="#home"
+              class="hover:text-grey disabled:text-greyblue focus-visible:underline active:font-bold active:underline duration-200"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#services"
+              class="hover:text-grey disabled:text-greyblue focus-visible:underline active:font-bold active:underline duration-200"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="#features"
+              class="hover:text-grey disabled:text-greyblue focus-visible:underline active:font-bold active:underline duration-200"
+              >Features</a
+            >
+          </li>
+          <li>
+            <a
+              href="#products"
+              class="hover:text-grey disabled:text-greyblue focus-visible:underline active:font-bold active:underline duration-200"
+              >Products</a
+            >
+          </li>
+          <li>
+            <a
+              href="#testimonials"
+              class="hover:text-grey disabled:text-greyblue focus-visible:underline active:font-bold active:underline duration-200"
+              >Testimonials</a
+            >
+          </li>
+          <li>
+            <a
+              href="#faq"
+              class="hover:text-grey disabled:text-greyblue focus-visible:underline active:font-bold active:underline duration-200"
+              >FAQ</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="hover:text-grey disabled:text-greyblue focus-visible:underline active:font-bold active:underline duration-200"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <div class="flex flex-col space-y-2">
+          <button
+            class="px-6 py-2 flex items-center justify-center gap-2 text-primary border border-primary focus-visible:border-i_grey focus-visible:border-2 active:bg-silver active:border-none disabled:text-greyblue disabled:border-none rounded hover:bg-silver transition-colors duration-300"
+            data-loading-button2
+            data-loading-icon="assets/images/icons/Loading2.png"
+          >
+            <span>Login</span>
+            <img class="w-5 h-5 hidden" data-loading-icon />
+          </button>
+          <button
+            class="px-6 py-2 bg-primary text-white rounded focus-visible:border-2 focus-visible:border-d_grey active:bg-shade_2 disabled:bg-silver disabled:text-greyblue transition-colors duration-300 flex items-center justify-center gap-2"
+            data-loading-button
+            data-loading-color="bg-red-500"
+            data-loading-icon="assets/images/icons/Loading.png"
+          >
+            <span>Sign Up</span>
+            <img class="w-5 h-5 hidden" data-loading-icon />
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero">
+        <div class="relative overflow-hidden">
+          <div
+            id="carousel"
+            class="flex transition-transform duration-1000 ease-in-out"
+          >
+            <div
+              class="flex flex-col md:flex-row items-center min-w-full bg-silver px-6 py-12 md:px-12 lg:px-60 md:py-24"
+            >
+              <div class="lg:flex-3">
+                <h1 class="text-h1 text-d_grey font-semibold">
+                  Lessons and insights<span class="text-primary">
+                    from 8 years</span
+                  >
+                </h1>
+                <p class="text-body2 mt-4 text-grey mb-4">
+                  Where to grow your business as a photographer: site or social
+                  media?
+                </p>
+                <button
+                  class="px-6 py-2 bg-primary text-white rounded focus-visible:border-2 focus-visible:border-d_grey active:bg-shade_2 disabled:bg-silver disabled:text-greyblue transition-colors duration-300 flex items-center justify-center gap-2"
+                  data-loading-button
+                  data-loading-icon="assets/images/icons/Loading.png"
+                >
+                  <span>Register</span>
+                  <img class="w-5 h-5 hidden" data-loading-icon />
+                </button>
+              </div>
+              <div class="md:flex-2 w-full md:w-1/2 mt-6 md:mt-0">
+                <img
+                  src="assets/images/hero.png"
+                  alt="Slide 1"
+                  class="w-full object-contain min-h-[300px] max-h-[400px]"
+                />
+              </div>
+            </div>
+            <div
+              class="flex flex-col md:flex-row items-center min-w-full bg-silver px-6 py-12 lg:px-60 lg:py-24"
+            >
+              <div class="lg:flex-3">
+                <h1 class="text-h1 text-d_grey font-semibold">
+                  Lessons and insights<span class="text-primary">
+                    from 8 years</span
+                  >
+                </h1>
+                <p class="text-body2 mt-4 text-grey mb-4">
+                  Where to grow your business as a photographer: site or social
+                  media?
+                </p>
+                <button
+                  class="px-6 py-2 bg-primary text-white rounded focus-visible:border-2 focus-visible:border-d_grey active:bg-shade_2 disabled:bg-silver disabled:text-greyblue transition-colors duration-300 flex items-center justify-center gap-2"
+                  data-loading-button
+                  data-loading-icon="assets/images/icons/Loading.png"
+                >
+                  <span>Register</span>
+                  <img class="w-5 h-5 hidden" data-loading-icon />
+                </button>
+              </div>
+              <div class="md:flex-2 w-full md:w-1/2 mt-6 md:mt-0">
+                <img
+                  src="assets/images/hero.png"
+                  alt="Slide 1"
+                  class="w-full object-contain min-h-[300px] max-h-[400px]"
+                />
+              </div>
+            </div>
+            <div
+              class="flex flex-col md:flex-row items-center min-w-full bg-silver px-6 py-12 lg:px-60 lg:py-24"
+            >
+              <div class="lg:flex-3">
+                <h1 class="text-h1 text-d_grey font-semibold">
+                  Lessons and insights<span class="text-primary">
+                    from 8 years</span
+                  >
+                </h1>
+                <p class="text-body2 mt-4 text-grey mb-4">
+                  Where to grow your business as a photographer: site or social
+                  media?
+                </p>
+                <button
+                  class="px-6 py-2 bg-primary text-white rounded focus-visible:border-2 focus-visible:border-d_grey active:bg-shade_2 disabled:bg-silver disabled:text-greyblue transition-colors duration-300 flex items-center justify-center gap-2"
+                  data-loading-button
+                  data-loading-icon="assets/images/icons/Loading.png"
+                >
+                  <span>Register</span>
+                  <img class="w-5 h-5 hidden" data-loading-icon />
+                </button>
+              </div>
+              <div class="md:flex-2 w-full md:w-1/2 mt-6 md:mt-0">
+                <img
+                  src="assets/images/hero.png"
+                  alt="Slide 1"
+                  class="w-full object-contain min-h-[300px] max-h-[400px]"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            id="dots-container"
+            class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2"
+          >
+            <button
+              class="dot bg-primary opacity-30 w-3 h-3 rounded-full"
+            ></button>
+            <button
+              class="dot bg-primary opacity-30 w-3 h-3 rounded-full"
+            ></button>
+            <button
+              class="dot bg-primary opacity-30 w-3 h-3 rounded-full"
+            ></button>
+          </div>
+        </div>
+      </section>
+
+      <section id="services">
+        <div
+          id="client"
+          class="flex flex-col items-center px-6 py-12 lg:px-60 lg:pt-12 lg:pb-10"
+        >
+          <h2 class="text-h2 text-d_grey">Our Clients</h2>
+          <p class="text-body3 md:text-body2 mt-2 text-grey">
+            We have been working with some Fortune 500+ clients
+          </p>
+          <div class="flex justify-evenly w-full py-8">
+            <img
+              src="assets/images/customer/l1.png"
+              alt="Client"
+              class="w-full max-w-[48px] max-h-[48px]"
+            />
+            <img
+              src="assets/images/customer/l2.png"
+              alt="Client"
+              class="w-full max-w-[48px] max-h-[48px]"
+            />
+            <img
+              src="assets/images/customer/l3.png"
+              alt="Client"
+              class="w-full max-w-[48px] max-h-[48px]"
+            />
+            <img
+              src="assets/images/customer/l4.png"
+              alt="Client"
+              class="w-full max-w-[48px] max-h-[48px]"
+            />
+            <img
+              src="assets/images/customer/l5.png"
+              alt="Client"
+              class="w-full max-w-[48px] max-h-[48px]"
+            />
+            <img
+              src="assets/images/customer/l6.png"
+              alt="Client"
+              class="w-full max-w-[48px] max-h-[48px]"
+            />
+            <img
+              src="assets/images/customer/l7.png"
+              alt="Client"
+              class="w-full max-w-[48px] max-h-[48px]"
+            />
+          </div>
+        </div>
+        <div
+          id="community"
+          class="flex flex-col items-center px-6 py-12 lg:px-60 lg:pt-12 lg:pb-10"
+        >
+          <h2 class="text-h2 text-d_grey text-center">
+            Manage your entire community <br />
+            in a single system
+          </h2>
+          <p class="text-body3 md:text-body2 my-2 text-grey">
+            Who is Nextcent suitable for?
+          </p>
+          <div class="flex text-center flex-col gap-x-6 md:flex-row">
+            <div
+              class="flex flex-col items-center p-6 shadow-shadow_c1 rounded-lg"
+            >
+              <div class="relative mb-4">
+                <img
+                  src="assets/images/icons/mem.png"
+                  alt="Community"
+                  class="w-full z-10 object-contain"
+                />
+                <div
+                  class="absolute bg-tint_5 rounded-tl-[10px] rounded-tr-[5px] rounded-bl-[5px] rounded-br-[18px] w-full h-full top-[17.5%] left-[35%] -z-10"
+                ></div>
+              </div>
+              <h3 class="text-h3 mb-2 max-w-[240px]">
+                Membership Organisations
+              </h3>
+              <p class="text-body2">
+                Our membership management software provides full automation of
+                membership renewals and payments
+              </p>
+            </div>
+            <div
+              class="flex flex-col items-center p-6 shadow-shadow_c1 rounded-lg"
+            >
+              <div class="relative mb-4">
+                <img
+                  src="assets/images/icons/nat.png"
+                  alt="Community"
+                  class="w-full z-10 object-contain"
+                />
+                <div
+                  class="absolute bg-tint_5 rounded-tl-[10px] rounded-tr-[5px] rounded-bl-[5px] rounded-br-[18px] w-full h-full top-[17.5%] left-[35%] -z-10"
+                ></div>
+              </div>
+              <h3 class="text-h3 mb-2 max-w-[240px]">National Associations</h3>
+              <p class="text-body2">
+                Our membership management software provides full automation of
+                membership renewals and payments
+              </p>
+            </div>
+            <div
+              class="flex flex-col items-center p-6 shadow-shadow_c1 rounded-lg"
+            >
+              <div class="relative mb-4">
+                <img
+                  src="assets/images/icons/club.png"
+                  alt="Community"
+                  class="w-full z-10 object-contain"
+                />
+                <div
+                  class="absolute bg-tint_5 rounded-tl-[10px] rounded-tr-[5px] rounded-bl-[5px] rounded-br-[18px] w-full h-full top-[17.5%] left-[35%] -z-10"
+                ></div>
+              </div>
+              <h3 class="text-h3 mb-2 max-w-[240px]">Clubs And Groups</h3>
+              <p class="text-body2">
+                Our membership management software provides full automation of
+                membership renewals and payments
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="py-12">
+        <div id="feature1" class="flex flex-col lg:px-60 md:flex-row">
+          <img
+            src="assets/images/f1.png"
+            class="w-full object-contain"
+            alt=""
+          />
+          <div class="p-12">
+            <h2 class="text-h2 text-d_grey mb-4">
+              The unseen of spending three years at Pixelgrade
+            </h2>
+            <p class="text-body3 text-grey mb-8">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
+              amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
+              Pellentesque placerat vestibulum lorem sed porta. Nullam mattis
+              tristique iaculis. Nullam pulvinar sit amet risus pretium auctor.
+              Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec
+              elementum pulvinar odio.
+            </p>
+            <button
+              class="px-6 py-2 bg-primary text-white rounded focus-visible:border-2 focus-visible:border-d_grey active:bg-shade_2 disabled:bg-silver disabled:text-greyblue transition-colors duration-300 flex items-center justify-center gap-2"
+              data-loading-button
+              data-loading-icon="assets/images/icons/Loading.png"
+            >
+              <span>Learn More</span>
+              <img class="w-5 h-5 hidden" data-loading-icon />
+            </button>
+          </div>
+        </div>
+        <div
+          id="achievements"
+          class="flex flex-col bg-silver py-12 md:px-6 md:flex-row lg:px-60"
+        >
+          <div class="py-16 px-4 flex-1 flex flex-col justify-start">
+            <h2 class="text-h2">
+              Helping a local <br />
+              <span class="text-primary">business reinvent itself</span>
+            </h2>
+            <p class="text-body_2">
+              We reached here with our hard work and dedication
+            </p>
+          </div>
+          <div class="flex flex-1 flex-col items-center justify-center">
+            <div class="flex flex-col md:flex-row gap-x-[30px] items-center">
+              <div class="flex mb-8 min-w-[210px]">
+                <img
+                  src="assets/images/icons/Users.png"
+                  alt=""
+                  class="w-full object-contain pb-4 max-w-12"
+                />
+                <div class="px-4">
+                  <div
+                    data-target="2245341"
+                    class="count-up text-d_grey text-h3"
+                  >
+                    <span class="count">0</span>
+                  </div>
+                  <p class="text-body_2 text-grey">Members</p>
+                </div>
+              </div>
+              <div class="flex mb-8 min-w-[210px]">
+                <img
+                  src="assets/images/icons/Layers.png"
+                  alt=""
+                  class="w-full object-contain pb-4 max-w-12"
+                />
+                <div class="px-4">
+                  <div data-target="46328" class="count-up text-d_grey text-h3">
+                    <span class="count">0</span>
+                  </div>
+                  <p class="text-body_2 text-grey">Clubs</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col md:flex-row gap-x-[30px] items-center">
+              <div class="flex mb-8 md:mb-0 min-w-[210px]">
+                <img
+                  src="assets/images/icons/Calendar.png"
+                  alt=""
+                  class="w-full object-contain pb-4 max-w-12"
+                />
+                <div class="px-4">
+                  <div
+                    data-target="828867"
+                    class="count-up text-d_grey text-h3"
+                  >
+                    <span class="count">0</span>
+                  </div>
+                  <p class="text-body_2 text-grey">Event Bookings</p>
+                </div>
+              </div>
+              <div class="flex mb-8 md:mb-0 min-w-[210px]">
+                <img
+                  src="assets/images/icons/Logout.png"
+                  alt=""
+                  class="w-full object-contain pb-4 max-w-12"
+                />
+                <div class="px-4">
+                  <div
+                    data-target="1926436"
+                    class="count-up text-d_grey text-h3"
+                  >
+                    <span class="count">0</span>
+                  </div>
+                  <p class="text-body_2 text-grey">Payments</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="feature2" class="flex flex-col lg:px-60 md:flex-row">
+          <img
+            src="assets/images/f2.png"
+            class="w-full object-contain"
+            alt=""
+          />
+          <div class="p-12">
+            <h2 class="text-h2 text-d_grey mb-4">
+              How to design your site footer like we did
+            </h2>
+            <p class="text-body3 text-grey mb-8">
+              Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor,
+              augue nec tincidunt molestie, massa nunc varius arcu, at
+              scelerisque elit erat a magna. Donec quis erat at libero ultrices
+              mollis. In hac habitasse platea dictumst. Vivamus vehicula leo
+              dui, at porta nisi facilisis finibus. In euismod augue vitae nisi
+              ultricies, non aliquet urna tincidunt. Integer in nisi eget nulla
+              commodo faucibus efficitur quis massa. Praesent felis est, finibus
+              et nisi ac, hendrerit venenatis libero. Donec consectetur faucibus
+              ipsum id gravida.
+            </p>
+            <button
+              class="px-6 py-2 bg-primary text-white rounded focus-visible:border-2 focus-visible:border-d_grey active:bg-shade_2 disabled:bg-silver disabled:text-greyblue transition-colors duration-300 flex items-center justify-center gap-2"
+              data-loading-button
+              data-loading-icon="assets/images/icons/Loading.png"
+            >
+              <span>Learn More</span>
+              <img class="w-5 h-5 hidden" data-loading-icon />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials">
+        <div class="py-12 bg-silver">
+          <div
+            class="lg:px-60 md:flex-row py-8 flex flex-col items-center justify-center"
+          >
+            <img
+              src="assets/images/Image.png"
+              class="w-full mt-4 object-contain"
+              alt=""
+            />
+            <div class="pl-8">
+              <p class="text-body2_medium pb-4 text-grey">
+                Maecenas dignissim justo eget nulla rutrum molestie. Maecenas
+                lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin
+                eu enim metus. Vivamus sed libero ornare, tristique quam in,
+                gravida enim. Nullam ut molestie arcu, at hendrerit elit. Morbi
+                laoreet elit at ligula molestie, nec molestie mi blandit.
+                Suspendisse cursus tellus sed augue ultrices, quis tristique
+                nulla sodales. Suspendisse eget lorem eu turpis vestibulum
+                pretium. Suspendisse potenti. Quisque malesuada enim sapien,
+                vitae placerat ante feugiat eget. Quisque vulputate odio neque,
+                eget efficitur libero condimentum id. Curabitur id nibh id sem
+                dignissim finibus ac sit amet magna.
+              </p>
+              <h4 class="text-h4 text-primary">Tim Smith</h4>
+              <p class="text-body_2 pb-4 text-i_grey">
+                British Dragon Boat Racing Association
+              </p>
+              <div class="grid lg:grid-cols-5">
+                <div class="flex flex-wrap col-span-3 w-full gap-x-4">
+                  <img
+                    src="assets/images/customer/l1.png"
+                    class="w-12 h-12 p-1"
+                    alt=""
+                  />
+                  <img
+                    src="assets/images/customer/l2.png"
+                    class="w-12 h-12 p-1"
+                    alt=""
+                  />
+                  <img
+                    src="assets/images/customer/l3.png"
+                    class="w-12 h-12 p-1"
+                    alt=""
+                  />
+                  <img
+                    src="assets/images/customer/l4.png"
+                    class="w-12 h-12 p-1"
+                    alt=""
+                  />
+                  <img
+                    src="assets/images/customer/l5.png"
+                    class="w-12 h-12 p-1"
+                    alt=""
+                  />
+                  <img
+                    src="assets/images/customer/l6.png"
+                    class="w-12 h-12 p-1"
+                    alt=""
+                  />
+                </div>
+                <button
+                  onclick=""
+                  class="flex text-primary mt-4 hover:underline focus-visible:border focus-visible:rounded-sm decoration-primary disabled:text-greyblue active:text-shade_2 active:decoration-shade_2 focus-visible:border-primary lg:mt-0 col-span-2 items-center justify-center w-full"
+                >
+                  <h4 class="text-h4 pr-3">Meet all customers</h4>
+                  <img
+                    src="assets/images/icons/Right.png"
+                    class="pt-2"
+                    alt=""
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="community">
+        <div
+          class="flex flex-col items-center text-center h-[250vh] md:h-[60vh] lg:h-screen py-12 px-6 lg:px-60 relative"
+        >
+          <h2 class="text-h2 pb-2 text-d_grey">Caring is the new marketing</h2>
+          <p class="text-body2 pb-8 max-w-[600px] text-grey">
+            The Nexcent blog is the best place to read about the latest
+            membership insights, trends and more. See who's joining the
+            community, read about how our community are increasing their
+            membership income and lot's more.
+          </p>
+          <div class="grid md:grid-cols-3 gap-x-6">
+            <div class="col-span-1 flex justify-center mb-56 md:mb-0 relative">
+              <img
+                src="assets/images/img1.png"
+                alt=""
+                class="w-full relative"
+              />
+
+              <div
+                class="w-3/4 p-4 absolute top-[80%] bg-silver shadow-shadow_c4 rounded-lg flex flex-col items-center justify-center z-10"
+              >
+                <h4 class="text-h4 pb-4 text-grey">
+                  Creating Streamlined Safeguarding Processes with OneRen
+                </h4>
+                <button
+                  class="px-4 lg:px-6 py-2 text-body2 lg:text-body1 bg-white flex items-center justify-center gap-2 text-primary border border-primary focus-visible:border-i_grey focus-visible:border-2 active:bg-silver active:border-none disabled:text-greyblue disabled:border-none rounded hover:bg-silver transition-colors duration-300"
+                  data-loading-button2
+                  data-loading-icon="assets/images/icons/Loading2.png"
+                >
+                  <span>Read more</span>
+                  <img
+                    src="assets/images/icons/Right.png"
+                    class="w-5 h-5"
+                    data-loading-icon2
+                  />
+                  <img class="w-5 h-5 hidden" data-loading-icon />
+                </button>
+              </div>
+            </div>
+
+            <div class="col-span-1 flex justify-center mb-56 md:mb-0 relative">
+              <img
+                src="assets/images/img2.png"
+                alt=""
+                class="w-full relative"
+              />
+
+              <div
+                class="w-3/4 p-4 absolute top-[80%] bg-silver shadow-shadow_c4 rounded-lg flex flex-col items-center justify-center z-10"
+              >
+                <h4 class="text-h4 pb-4 text-grey">
+                  What are your safeguarding and how can you manage them?
+                </h4>
+                <button
+                  class="px-4 lg:px-6 py-2 text-body2 lg:text-body1 bg-white flex items-center justify-center gap-2 text-primary border border-primary focus-visible:border-i_grey focus-visible:border-2 active:bg-silver active:border-none disabled:text-greyblue disabled:border-none rounded hover:bg-silver transition-colors duration-300"
+                  data-loading-button2
+                  data-loading-icon="assets/images/icons/Loading2.png"
+                >
+                  <span>Read more</span>
+                  <img
+                    src="assets/images/icons/Right.png"
+                    class="w-5 h-5"
+                    data-loading-icon2
+                  />
+                  <img class="w-5 h-5 hidden" data-loading-icon />
+                </button>
+              </div>
+            </div>
+
+            <div class="col-span-1 flex justify-center relative">
+              <img
+                src="assets/images/img3.png"
+                alt=""
+                class="w-full relative"
+              />
+
+              <div
+                class="w-3/4 p-4 absolute top-[80%] bg-silver shadow-shadow_c4 rounded-lg flex flex-col items-center justify-center z-10"
+              >
+                <h4 class="text-h4 pb-4 text-grey">
+                  Revamping the Membership Model with Triathlon Australia
+                </h4>
+                <button
+                  class="px-4 lg:px-6 py-2 text-body2 lg:text-body1 bg-white flex items-center justify-center gap-2 text-primary border border-primary focus-visible:border-i_grey focus-visible:border-2 active:bg-silver active:border-none disabled:text-greyblue disabled:border-none rounded hover:bg-silver transition-colors duration-300"
+                  data-loading-button2
+                  data-loading-icon="assets/images/icons/Loading2.png"
+                >
+                  <span>Read more</span>
+                  <img
+                    src="assets/images/icons/Right.png"
+                    class="w-5 h-5"
+                    data-loading-icon2
+                  />
+                  <img class="w-5 h-5 hidden" data-loading-icon />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cta">
+        <div
+          class="py-12 pb-20 bg-silver lg:px-60 flex flex-col items-center justify-center"
+        >
+          <div class="text-h1 py-8 text-black">Wanna try our app?</div>
+          <button
+            class="px-6 py-2 bg-primary text-white rounded focus-visible:border-2 focus-visible:border-d_grey active:bg-shade_2 disabled:bg-silver disabled:text-greyblue transition-colors duration-300 flex items-center justify-center gap-2"
+            data-loading-button
+            data-loading-icon="assets/images/icons/Loading.png"
+          >
+            <span>Get a demo</span>
+            <img
+              src="assets/images/icons/Right2.png"
+              class="w-5 h-5"
+              data-loading-icon2
+            />
+
+            <img class="w-5 h-5 hidden" data-loading-icon />
+          </button>
+        </div>
+      </section>
+
+      <section id="faq">...]</section>
+
+      <section id="contact">...</section>
+
+      <footer class="bg-black text-white py-10 px-6 lg:px-60">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="flex flex-col">
+            <img
+              src="assets/images/logow.png"
+              alt="Company Logo"
+              class="mb-6 w-32"
+            />
+            <p class="text-body3 text-silver">
+              Copyright © 2024 Riglabs Collective
+            </p>
+            <p class="text-body3 mb-6 text-silver">All rights reserved.</p>
+
+            <div class="flex space-x-4">
+              <a href="#"
+                ><img
+                  src="assets/images/icons/insta.png"
+                  alt="Facebook"
+                  class="w-8 h-8"
+              /></a>
+              <a href="#"
+                ><img
+                  src="assets/images/icons/int.png"
+                  alt="Twitter"
+                  class="w-8 h-8"
+              /></a>
+              <a href="#"
+                ><img
+                  src="assets/images/icons/twit.png"
+                  alt="Instagram"
+                  class="w-8 h-8"
+              /></a>
+              <a href="#"
+                ><img
+                  src="assets/images/icons/you.png"
+                  alt="LinkedIn"
+                  class="w-8 h-8"
+              /></a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-h4 text-white mb-4">Company</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-body3 text-silver hover:underline hover:decoration-silver focus-visible:border focus-visible:border-i_grey active:text-shade_2 active:decoration-shade_2 active:underline disabled:text-greyblue"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-body3 text-silver hover:underline hover:decoration-silver focus-visible:border focus-visible:border-i_grey active:text-shade_2 active:decoration-shade_2 active:underline disabled:text-greyblue"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-body3 text-silver hover:underline hover:decoration-silver focus-visible:border focus-visible:border-i_grey active:text-shade_2 active:decoration-shade_2 active:underline disabled:text-greyblue"
+                  >Contact us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-body3 text-silver hover:underline hover:decoration-silver focus-visible:border focus-visible:border-i_grey active:text-shade_2 active:decoration-shade_2 active:underline disabled:text-greyblue"
+                  >Pricing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-body3 text-silver hover:underline hover:decoration-silver focus-visible:border focus-visible:border-i_grey active:text-shade_2 active:decoration-shade_2 active:underline disabled:text-greyblue"
+                  >Testimonials</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-h4 text-white mb-4">Support</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-body3 text-silver hover:underline hover:decoration-silver focus-visible:border focus-visible:border-i_grey active:text-shade_2 active:decoration-shade_2 active:underline disabled:text-greyblue"
+                  >Help center</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-body3 text-silver hover:underline hover:decoration-silver focus-visible:border focus-visible:border-i_grey active:text-shade_2 active:decoration-shade_2 active:underline disabled:text-greyblue"
+                  >Terms of service</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-body3 text-silver hover:underline hover:decoration-silver focus-visible:border focus-visible:border-i_grey active:text-shade_2 active:decoration-shade_2 active:underline disabled:text-greyblue"
+                  >legal</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-body3 text-silver hover:underline hover:decoration-silver focus-visible:border focus-visible:border-i_grey active:text-shade_2 active:decoration-shade_2 active:underline disabled:text-greyblue"
+                  >Privacy policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-body3 text-silver hover:underline hover:decoration-silver focus-visible:border focus-visible:border-i_grey active:text-shade_2 active:decoration-shade_2 active:underline disabled:text-greyblue"
+                  >Status</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-h4 text-white mb-4">stay upto date</h4>
+            <form action="#" class="flex flex-col">
+              <div class="relative flex items-center">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  class="px-4 py-2 rounded-lg focus:border focus:border-silver bg-[#fff2] text-[#7171713] w-full pr-12"
+                />
+                <button
+                  type="submit"
+                  class="absolute right-0 top-0 bottom-0 px-3 py-2 text-white rounded-r-md flex items-center justify-center"
+                >
+                  <img
+                    src="assets/images/icons/send.png"
+                    alt="Send"
+                    class="w-5 h-5"
+                  />
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="src/js/main.js"></script>
+  </body>
+</html>
