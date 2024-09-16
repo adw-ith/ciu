@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const observerOptions = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.5,
+    threshold: 0.1,
   };
 
   const observer = new IntersectionObserver((entries) => {
@@ -58,7 +58,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const id = entry.target.getAttribute("id");
       if (entry.isIntersecting) {
         navLinks.forEach((link) => {
-          link.classList.toggle("active", link.getAttribute("data-id") === id);
+          link.getAttribute("data-id") === id
+            ? link.classList.add("font-bold")
+            : link.classList.remove("font-bold");
         });
       }
     });
@@ -148,4 +150,24 @@ function countUp(element) {
 
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".count-up").forEach(countUp);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("fade-in");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+    }
+  );
+
+  document.querySelectorAll(".fade", ".fade2").forEach((element) => {
+    observer.observe(element);
+  });
 });

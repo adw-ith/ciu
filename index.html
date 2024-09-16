@@ -10,9 +10,19 @@
     *:focus {
       outline: none;
     }
+    .fade {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    }
+
+    .fade-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
   <body class="scrolll-smooth">
-    <header class="bg-white px-6 lg:px-60">
+    <header class="bg-white sticky top-0 z-50 px-6 lg:px-60">
       <div
         class="container pl-6 lg:pl-0 mx-auto flex items-center justify-between py-4"
       >
@@ -212,17 +222,17 @@
               class="flex flex-col md:flex-row items-center min-w-full bg-silver px-6 py-12 md:px-12 lg:px-60 md:py-24"
             >
               <div class="lg:flex-3">
-                <h1 class="text-h1 text-d_grey font-semibold">
+                <h1 class="fade text-h1 text-d_grey font-semibold">
                   Lessons and insights<span class="text-primary">
                     from 8 years</span
                   >
                 </h1>
-                <p class="text-body2 mt-4 text-grey mb-4">
+                <p class="fade text-body2 mt-4 text-grey mb-4">
                   Where to grow your business as a photographer: site or social
                   media?
                 </p>
                 <button
-                  class="px-6 py-2 bg-primary text-white rounded focus-visible:border-2 focus-visible:border-d_grey active:bg-shade_2 disabled:bg-silver disabled:text-greyblue transition-colors duration-300 flex items-center justify-center gap-2"
+                  class="fade px-6 py-2 bg-primary text-white rounded focus-visible:border-2 focus-visible:border-d_grey active:bg-shade_2 disabled:bg-silver disabled:text-greyblue transition-colors duration-300 flex items-center justify-center gap-2"
                   data-loading-button
                   data-loading-icon="assets/images/icons/Loading.png"
                 >
@@ -234,7 +244,7 @@
                 <img
                   src="assets/images/hero.png"
                   alt="Slide 1"
-                  class="w-full object-contain min-h-[300px] max-h-[400px]"
+                  class="fade w-full object-contain min-h-[300px] max-h-[400px]"
                 />
               </div>
             </div>
@@ -242,17 +252,17 @@
               class="flex flex-col md:flex-row items-center min-w-full bg-silver px-6 py-12 lg:px-60 lg:py-24"
             >
               <div class="lg:flex-3">
-                <h1 class="text-h1 text-d_grey font-semibold">
+                <h1 class="fade text-h1 text-d_grey font-semibold">
                   Lessons and insights<span class="text-primary">
                     from 8 years</span
                   >
                 </h1>
-                <p class="text-body2 mt-4 text-grey mb-4">
+                <p class="fade text-body2 mt-4 text-grey mb-4">
                   Where to grow your business as a photographer: site or social
                   media?
                 </p>
                 <button
-                  class="px-6 py-2 bg-primary text-white rounded focus-visible:border-2 focus-visible:border-d_grey active:bg-shade_2 disabled:bg-silver disabled:text-greyblue transition-colors duration-300 flex items-center justify-center gap-2"
+                  class="fade px-6 py-2 bg-primary text-white rounded focus-visible:border-2 focus-visible:border-d_grey active:bg-shade_2 disabled:bg-silver disabled:text-greyblue transition-colors duration-300 flex items-center justify-center gap-2"
                   data-loading-button
                   data-loading-icon="assets/images/icons/Loading.png"
                 >
@@ -264,7 +274,7 @@
                 <img
                   src="assets/images/hero.png"
                   alt="Slide 1"
-                  class="w-full object-contain min-h-[300px] max-h-[400px]"
+                  class="fade w-full object-contain min-h-[300px] max-h-[400px]"
                 />
               </div>
             </div>
@@ -272,17 +282,17 @@
               class="flex flex-col md:flex-row items-center min-w-full bg-silver px-6 py-12 lg:px-60 lg:py-24"
             >
               <div class="lg:flex-3">
-                <h1 class="text-h1 text-d_grey font-semibold">
+                <h1 class="fade text-h1 text-d_grey font-semibold">
                   Lessons and insights<span class="text-primary">
                     from 8 years</span
                   >
                 </h1>
-                <p class="text-body2 mt-4 text-grey mb-4">
+                <p class="fade text-body2 mt-4 text-grey mb-4">
                   Where to grow your business as a photographer: site or social
                   media?
                 </p>
                 <button
-                  class="px-6 py-2 bg-primary text-white rounded focus-visible:border-2 focus-visible:border-d_grey active:bg-shade_2 disabled:bg-silver disabled:text-greyblue transition-colors duration-300 flex items-center justify-center gap-2"
+                  class="fade px-6 py-2 bg-primary text-white rounded focus-visible:border-2 focus-visible:border-d_grey active:bg-shade_2 disabled:bg-silver disabled:text-greyblue transition-colors duration-300 flex items-center justify-center gap-2"
                   data-loading-button
                   data-loading-icon="assets/images/icons/Loading.png"
                 >
@@ -294,7 +304,7 @@
                 <img
                   src="assets/images/hero.png"
                   alt="Slide 1"
-                  class="w-full object-contain min-h-[300px] max-h-[400px]"
+                  class="fade w-full object-contain min-h-[300px] max-h-[400px]"
                 />
               </div>
             </div>
@@ -321,11 +331,11 @@
           id="client"
           class="flex flex-col items-center px-6 py-12 lg:px-60 lg:pt-12 lg:pb-10"
         >
-          <h2 class="text-h2 text-d_grey">Our Clients</h2>
-          <p class="text-body3 md:text-body2 mt-2 text-grey">
+          <h2 class="fade text-h2 text-d_grey">Our Clients</h2>
+          <p class="fade text-body3 md:text-body2 mt-2 text-grey">
             We have been working with some Fortune 500+ clients
           </p>
-          <div class="flex justify-evenly w-full py-8">
+          <div class="fade flex justify-evenly w-full py-8">
             <img
               src="assets/images/customer/l1.png"
               alt="Client"
@@ -367,16 +377,16 @@
           id="community"
           class="flex flex-col items-center px-6 py-12 lg:px-60 lg:pt-12 lg:pb-10"
         >
-          <h2 class="text-h2 text-d_grey text-center">
+          <h2 class="fade text-h2 text-d_grey text-center">
             Manage your entire community <br />
             in a single system
           </h2>
-          <p class="text-body3 md:text-body2 my-2 text-grey">
+          <p class="fade text-body3 md:text-body2 my-2 text-grey">
             Who is Nextcent suitable for?
           </p>
           <div class="flex text-center flex-col gap-x-6 md:flex-row">
             <div
-              class="flex flex-col items-center p-6 shadow-shadow_c1 rounded-lg"
+              class="fade flex flex-col items-center p-6 shadow-shadow_c1 rounded-lg"
             >
               <div class="relative mb-4">
                 <img
@@ -397,7 +407,7 @@
               </p>
             </div>
             <div
-              class="flex flex-col items-center p-6 shadow-shadow_c1 rounded-lg"
+              class="fade flex flex-col items-center p-6 shadow-shadow_c1 rounded-lg"
             >
               <div class="relative mb-4">
                 <img
@@ -416,7 +426,7 @@
               </p>
             </div>
             <div
-              class="flex flex-col items-center p-6 shadow-shadow_c1 rounded-lg"
+              class="fade flex flex-col items-center p-6 shadow-shadow_c1 rounded-lg"
             >
               <div class="relative mb-4">
                 <img
@@ -442,10 +452,10 @@
         <div id="feature1" class="flex flex-col lg:px-60 md:flex-row">
           <img
             src="assets/images/f1.png"
-            class="w-full object-contain"
+            class="fade w-full object-contain"
             alt=""
           />
-          <div class="p-12">
+          <div class="fade p-12">
             <h2 class="text-h2 text-d_grey mb-4">
               The unseen of spending three years at Pixelgrade
             </h2>
@@ -458,7 +468,7 @@
               elementum pulvinar odio.
             </p>
             <button
-              class="px-6 py-2 bg-primary text-white rounded focus-visible:border-2 focus-visible:border-d_grey active:bg-shade_2 disabled:bg-silver disabled:text-greyblue transition-colors duration-300 flex items-center justify-center gap-2"
+              class="fade px-6 py-2 bg-primary text-white rounded focus-visible:border-2 focus-visible:border-d_grey active:bg-shade_2 disabled:bg-silver disabled:text-greyblue transition-colors duration-300 flex items-center justify-center gap-2"
               data-loading-button
               data-loading-icon="assets/images/icons/Loading.png"
             >
@@ -471,18 +481,18 @@
           id="achievements"
           class="flex flex-col bg-silver py-12 md:px-6 md:flex-row lg:px-60"
         >
-          <div class="py-16 px-4 flex-1 flex flex-col justify-start">
-            <h2 class="text-h2">
+          <div class="fade py-16 px-4 flex-1 flex flex-col justify-start">
+            <h2 class="fade text-h2">
               Helping a local <br />
               <span class="text-primary">business reinvent itself</span>
             </h2>
-            <p class="text-body_2">
+            <p class="fade text-body_2">
               We reached here with our hard work and dedication
             </p>
           </div>
           <div class="flex flex-1 flex-col items-center justify-center">
             <div class="flex flex-col md:flex-row gap-x-[30px] items-center">
-              <div class="flex mb-8 min-w-[210px]">
+              <div class="fade flex mb-8 min-w-[210px]">
                 <img
                   src="assets/images/icons/Users.png"
                   alt=""
@@ -498,7 +508,7 @@
                   <p class="text-body_2 text-grey">Members</p>
                 </div>
               </div>
-              <div class="flex mb-8 min-w-[210px]">
+              <div class="fade flex mb-8 min-w-[210px]">
                 <img
                   src="assets/images/icons/Layers.png"
                   alt=""
@@ -513,7 +523,7 @@
               </div>
             </div>
             <div class="flex flex-col md:flex-row gap-x-[30px] items-center">
-              <div class="flex mb-8 md:mb-0 min-w-[210px]">
+              <div class="fade flex mb-8 md:mb-0 min-w-[210px]">
                 <img
                   src="assets/images/icons/Calendar.png"
                   alt=""
@@ -529,7 +539,7 @@
                   <p class="text-body_2 text-grey">Event Bookings</p>
                 </div>
               </div>
-              <div class="flex mb-8 md:mb-0 min-w-[210px]">
+              <div class="fade flex mb-8 md:mb-0 min-w-[210px]">
                 <img
                   src="assets/images/icons/Logout.png"
                   alt=""
@@ -551,10 +561,10 @@
         <div id="feature2" class="flex flex-col lg:px-60 md:flex-row">
           <img
             src="assets/images/f2.png"
-            class="w-full object-contain"
+            class="fade w-full object-contain"
             alt=""
           />
-          <div class="p-12">
+          <div class="fade p-12">
             <h2 class="text-h2 text-d_grey mb-4">
               How to design your site footer like we did
             </h2>
@@ -588,11 +598,11 @@
           >
             <img
               src="assets/images/Image.png"
-              class="w-full mt-4 object-contain"
+              class="fade w-full mt-4 object-contain"
               alt=""
             />
             <div class="pl-8">
-              <p class="text-body2_medium pb-4 text-grey">
+              <p class="fade text-body2_medium pb-4 text-grey">
                 Maecenas dignissim justo eget nulla rutrum molestie. Maecenas
                 lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin
                 eu enim metus. Vivamus sed libero ornare, tristique quam in,
@@ -605,11 +615,11 @@
                 eget efficitur libero condimentum id. Curabitur id nibh id sem
                 dignissim finibus ac sit amet magna.
               </p>
-              <h4 class="text-h4 text-primary">Tim Smith</h4>
-              <p class="text-body_2 pb-4 text-i_grey">
+              <h4 class="fade text-h4 text-primary">Tim Smith</h4>
+              <p class="fade text-body_2 pb-4 text-i_grey">
                 British Dragon Boat Racing Association
               </p>
-              <div class="grid lg:grid-cols-5">
+              <div class="fade grid lg:grid-cols-5">
                 <div class="flex flex-wrap col-span-3 w-full gap-x-4">
                   <img
                     src="assets/images/customer/l1.png"
@@ -661,17 +671,21 @@
 
       <section id="community">
         <div
-          class="flex flex-col items-center text-center h-[250vh] md:h-[60vh] lg:h-screen py-12 px-6 lg:px-60 relative"
+          class="flex flex-col items-center text-center h-[220vh] md:h-[60vh] lg:h-screen py-12 px-6 lg:px-60 relative"
         >
-          <h2 class="text-h2 pb-2 text-d_grey">Caring is the new marketing</h2>
-          <p class="text-body2 pb-8 max-w-[600px] text-grey">
+          <h2 class="fade text-h2 pb-2 text-d_grey">
+            Caring is the new marketing
+          </h2>
+          <p class="fade text-body2 pb-8 max-w-[600px] text-grey">
             The Nexcent blog is the best place to read about the latest
             membership insights, trends and more. See who's joining the
             community, read about how our community are increasing their
             membership income and lot's more.
           </p>
           <div class="grid md:grid-cols-3 gap-x-6">
-            <div class="col-span-1 flex justify-center mb-56 md:mb-0 relative">
+            <div
+              class="fade col-span-1 flex justify-center mb-56 md:mb-0 relative"
+            >
               <img
                 src="assets/images/img1.png"
                 alt=""
@@ -700,7 +714,9 @@
               </div>
             </div>
 
-            <div class="col-span-1 flex justify-center mb-56 md:mb-0 relative">
+            <div
+              class="fade col-span-1 flex justify-center mb-56 md:mb-0 relative"
+            >
               <img
                 src="assets/images/img2.png"
                 alt=""
@@ -729,7 +745,7 @@
               </div>
             </div>
 
-            <div class="col-span-1 flex justify-center relative">
+            <div class="fade col-span-1 flex justify-center relative">
               <img
                 src="assets/images/img3.png"
                 alt=""
@@ -763,7 +779,7 @@
 
       <section id="cta">
         <div
-          class="py-12 pb-20 bg-silver lg:px-60 flex flex-col items-center justify-center"
+          class="fade py-12 pb-20 bg-silver lg:px-60 flex flex-col items-center justify-center"
         >
           <div class="text-h1 py-8 text-black">Wanna try our app?</div>
           <button
@@ -783,9 +799,89 @@
         </div>
       </section>
 
-      <section id="faq">...]</section>
+      <section id="contact">
+        <div class="flex flex-col md:flex-row px-6 lg:px-60 py-12">
+          <div class="flex pb-8 md:pb-0 flex-1 items-center justify-center">
+            <h2 class="text-h2 text-d_grey">
+              Have more queries for us?<span class="text-primary">
+                Contact us</span
+              >
+            </h2>
+          </div>
+          <div class="flex-1">
+            <form action="#" method="POST" class="space-y-4">
+              <div>
+                <label for="name" class="block font-medium text-grey text-body2"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="mt-1 block w-full px-4 py-2 bg-silver rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                />
+              </div>
 
-      <section id="contact">...</section>
+              <div>
+                <label
+                  for="email"
+                  class="block font-medium text-grey text-body2"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="mt-1 block w-full px-4 py-2 bg-silver rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                />
+              </div>
+
+              <div>
+                <label
+                  for="subject"
+                  class="block font-medium text-grey text-body2"
+                  >Subject</label
+                >
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  required
+                  class="mt-1 block w-full px-4 py-2 bg-silver rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                />
+              </div>
+
+              <div>
+                <label
+                  for="message"
+                  class="block font-medium text-grey text-body2"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows="4"
+                  class="mt-1 block w-full px-4 py-2 bg-silver rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                ></textarea>
+              </div>
+
+              <div class="flex justify-center">
+                <button
+                  class="px-6 py-2 bg-primary text-white rounded focus-visible:border-2 focus-visible:border-d_grey active:bg-shade_2 disabled:bg-silver disabled:text-greyblue transition-colors duration-300 flex items-center justify-center gap-2"
+                  data-loading-button
+                  data-loading-icon="assets/images/icons/Loading.png"
+                >
+                  <span>Submit</span>
+                  <img class="w-5 h-5 hidden" data-loading-icon />
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
 
       <footer class="bg-black text-white py-10 px-6 lg:px-60">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
